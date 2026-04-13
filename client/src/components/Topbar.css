@@ -1,0 +1,28 @@
+.topbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  right: 12px;
+  width: 20px;
+  height: 20px;
+  color: #999;
+  pointer-events: none;
+}
+
+.topbar input {
+  padding: 10px 10px 10px 20px;
+  border-radius: 20px;
+  border: none;
+  width: 350px;
+}

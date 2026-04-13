@@ -1,0 +1,208 @@
+.login-bg {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, #f5c842 0%, #e8a020 50%, #d48a10 100%);
+  font-family: ' Poppins', sans-serif;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.login-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 48px 52px 40px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+}
+
+/* ── Title ── */
+.login-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #1a1a1a;
+  text-align: center;
+  margin: 0 0 32px;
+  letter-spacing: 0.3px;
+}
+
+/* ── Form ── */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ── Field group ── */
+.login-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.login-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+}
+
+/* ── Input ── */
+.login-input {
+  width: 100%;
+  padding: 13px 16px;
+  border: none;
+  border-radius: 10px;
+  background: #f2f2f2;
+  font-size: 15px;
+  color: #1a1a1a;
+  outline: none;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+  border-bottom: none !important;
+}
+
+.login-input::placeholder {
+  color: #999;
+  border: none;
+}
+
+.login-input:focus {
+  background: #ebebeb;
+  box-shadow: none;
+}
+
+/* ── Password wrapper ── */
+.login-pass-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.login-pass-wrap .login-input {
+  padding-right: 46px;
+}
+
+.login-eye {
+  position: absolute;
+  right: 2px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+  padding: 0;
+  line-height: 1;
+  opacity: 0.6;
+}
+
+
+/* ── Remember me + Forgot ── */
+.login-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.login-remember {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  color: #555;
+  cursor: pointer;
+  user-select: none;
+}
+
+.login-check {
+  width: 15px;
+  height: 15px;
+  accent-color: #e8a020;
+  cursor: pointer;
+}
+
+.login-forgot {
+  background: none;
+  border: none;
+  color: #e8a020;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.2s;
+}
+
+
+/* ── Error message ── */
+.login-error {
+  font-size: 13px;
+  color: #e05555;
+  margin: 0;
+  padding: 10px 14px;
+  background: #fdf0f0;
+  border-radius: 8px;
+  border-left: 3px solid #e05555;
+  animation: shake 0.35s ease both;
+}
+
+/* ── Submit button ── */
+.login-btn {
+  width: 100%;
+  padding: 15px;
+  background: #e8a020;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  letter-spacing: 0.3px;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 16px rgba(232, 160, 32, 0.4);
+}
+
+
+.login-btn:active:not(:disabled) { transform: translateY(0); }
+
+.login-btn:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+/* ── Loading spinner ── */
+.login-spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255,255,255,0.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  display: inline-block;
+}
+
+/* ── Sign up link ── */
+.login-signup {
+  text-align: center;
+  margin: 20px 0 0;
+  font-size: 14px;
+  color: #888;
+}
+
+.login-signup-link {
+  color: #1a1a1a;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .login-card { padding: 36px 28px 32px; }
+  .login-title { font-size: 24px; }
+}
