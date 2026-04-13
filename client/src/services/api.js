@@ -52,19 +52,19 @@ export const eggAPI = {
 
   create: (data) => {
     return request('/eggs', 'POST', {
-      date: data.date,
-      batchId: data.batchId,   
+      date:      data.date,
+      batchId:   data.batchId,
       totalEggs: data.totalEggs,
-      eggSizes: data.eggSizes,
+      eggSizes:  data.eggSizes,
     });
   },
 
   update: (id, data) => {
     return request(`/eggs/${id}`, 'PUT', {
-      date: data.date,
-      batchId: data.batchId,   
+      date:      data.date,
+      batchId:   data.batchId,
       totalEggs: data.totalEggs,
-      eggSizes: data.eggSizes,
+      eggSizes:  data.eggSizes,
     });
   },
 

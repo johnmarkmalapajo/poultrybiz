@@ -96,53 +96,9 @@ const deleteFlock = async (req, res) => {
   }
 };
 
-const getFlocksRecord = async (req, res) => {
-  try {
-    const { breed, isActive, sortBy, order, page = 1, limit = 10 } = req.query;
-
-
-    let filter = {};
-
-    if (breed) {
-      filter.breed = { $regex: breed, $options: 'i' };
-    }
-
-    if (isActive !== undefined) {
-      filter.isActive = isActive === 'true';
-    }
-
-    let sortOptions = { createdAt: -1 };
-
-    if (sortBy) {
-      sortOptions[sortBy] = order === 'desc' ? -1 : 1;
-    }
-
-    const pageNumber = parseInt(page);
-    const limitNumber = parseInt(limit);
-    const skip = (pageNumber - 1) * limitNumber;
-
-    const flocks = await Flock.find(filter)
-      .sort(sortOptions)
-      .skip(skip)
-      .limit(limitNumber);
-
-    const total = await Flock.countDocuments(filter);
-
-    res.status(200).json({
-      total,
-      page: pageNumber,
-      totalPages: Math.ceil(total / limitNumber),
-      data: flocks
-    });
-
-  } catch (error) {
-    res.status(500).json({ message: error.message });
-  }
-};
-
 module.exports = {
   getFlocks,
   addFlock,
   updateFlock,
-  deleteFlock
+  deleteFlock,
 };

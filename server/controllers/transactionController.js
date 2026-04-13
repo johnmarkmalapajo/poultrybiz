@@ -42,48 +42,5 @@ const deleteTransaction = async (req, res) => {
   }
 };
 
-const getTransactionsRecords = async (req, res) => {
-  try {
-    const { payment_status, egg_size, sortBy, order, page = 1, limit = 10 } = req.query;
-
-    let filter = {};
-
-    if (payment_status) {
-      filter.payment_status = payment_status;
-    }
-
-    if (egg_size) {
-      filter.egg_size = egg_size;
-    }
-
-    let sortOptions = { date: -1 };
-
-    if (sortBy) {
-      sortOptions[sortBy] = order === 'desc' ? -1 : 1;
-    }
-
-    const pageNumber = parseInt(page);
-    const limitNumber = parseInt(limit);
-    const skip = (pageNumber - 1) * limitNumber;
-
-    const transactions = await Sale.find(filter)
-      .sort(sortOptions)
-      .skip(skip)
-      .limit(limitNumber);
-
-    const total = await Sale.countDocuments(filter);
-
-    res.status(200).json({
-      total,
-      page: pageNumber,
-      totalPages: Math.ceil(total / limitNumber),
-      data: transactions
-    });
-
-  } catch (error) {
-    res.status(500).json({ message: error.message });
-  }
-};
-
 
 module.exports = { getTransactions, addTransaction, updateTransaction, deleteTransaction };
