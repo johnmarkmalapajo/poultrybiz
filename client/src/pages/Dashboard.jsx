@@ -9,7 +9,7 @@ import Card, { Icons } from "../components/Card";
 import { useUser } from "../hooks/useUser";
 import "./Dashboard.css";
 
-const BASE_URL = "https://poultrybriz-server.onrender.com/api/v1";
+const BASE_URL = "https://poultrybiz-server.onrender.com/api/v1";
 
 const EGG_COLORS = ["#f5d76e","#f5a623","#f0a070","#d4a0e0","#a0c4f0","#70b8d4","#a0d4b0"];
 const EGG_LABELS = ["Large","Extra Large","Medium","Jumbo","Small","Peewee","Crack"];
