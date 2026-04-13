@@ -1,5 +1,5 @@
 // src/services/api.js
-const BASE_URL = 'https://poultrybiz-server.onrender.com/api/v1';
+const BASE_URL = 'https://poultrybiz.onrender.com/api/v1';
 
 const authHeaders = () => ({
   'Content-Type': 'application/json',

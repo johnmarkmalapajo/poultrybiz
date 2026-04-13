@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Signup.css";
 
-const BASE_URL = "https://poultrybiz-server.onrender.com/api/v1";
+const BASE_URL = "https://poultrybiz.onrender.com/api/v1";
 const ROLES    = ["Admin", "Farmer"];
 
 export default function Signup() {
