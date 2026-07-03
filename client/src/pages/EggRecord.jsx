@@ -6,12 +6,12 @@ import Topbar from "../components/Topbar";
 import { eggAPI } from "../services/api";
 import "../components/RecordTable.css";
 
-const EGG_SIZES = ["large", "extraLarge", "medium", "jumbo", "small", "peewee", "crack"];
+const EGG_SIZES = ["jumbo", "extraLarge", "large", "medium", "small", "peewee", "crack"];
 const EGG_LABELS = {
-  large: "Large",
-  extraLarge: "Extra Large",
-  medium: "Medium",
   jumbo: "Jumbo",
+  extraLarge: "Extra Large",
+  large: "Large",
+  medium: "Medium",
   small: "Small",
   peewee: "Peewee",
   crack: "Crack",
